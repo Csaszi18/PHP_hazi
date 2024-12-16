@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Registration</title>
+</head>
+<body>
+<h3>Online Conference Registration</h3>
+<form method="post" action="process_registration.php" enctype="multipart/form-data">
+    <label for="fname">First name:
+        <input type="text" name="firstName" id="fname" required>
+    </label>
+    <br><br>
+    <label for="lname">Last name:
+        <input type="text" name="lastName" id="lname" required>
+    </label>
+    <br><br>
+    <label for="email">E-mail:
+        <input type="text" name="email" id="email" required>
+    </label>
+    <br><br>
+    <label>I will attend:<br>
+        <input type="checkbox" name="attend[]" value="Event1">Event 1<br>
+        <input type="checkbox" name="attend[]" value="Event2">Event 2<br>
+        <input type="checkbox" name="attend[]" value="Event3">Event 3<br>
+        <input type="checkbox" name="attend[]" value="Event4">Event 4<br>
+    </label>
+    <br><br>
+    <label for="tshirt">What's your T-Shirt size?<br>
+        <select name="tshirt" id="tshirt">
+            <option value="P">Please select</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+    </label>
+    <br><br>
+    <label for="abstract">Upload your abstract<br>
+        <input type="file" name="abstract" id="abstract" required>
+    </label>
+    <br><br>
+    <input type="checkbox" name="terms" required>I agree to terms & conditions.<br><br>
+    <input type="submit" name="submit" value="Send registration">
+</form>
+</body>
+</html>
